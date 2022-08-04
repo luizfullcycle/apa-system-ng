@@ -26,6 +26,7 @@ export class EndocrinoComponent implements OnInit{
       hasOutrosEndocrino:[false]
     })
   }
+
   avancar(){
   this.endocrinoService.setEndocrino(this.formGroup.value)
   this.eventCloseDialog.emit();
