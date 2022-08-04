@@ -1,0 +1,23 @@
+<form>
+  <div class="grid">
+    <div class="col-4">
+      <div class="field-checkbox">
+        <p-radioButton name="fumante" formControlName="fumante" label="Sim" value="1">
+        </p-radioButton>
+      </div>
+      <div class="field-checkbox">
+        <p-radioButton name="fumante" formControlName="fumante" label="Não" value="0">
+        </p-radioButton>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="formgroup-inline">
+        <div class="field">
+          <label>Informar</label>
+          <textarea pInputTextarea [rows]="8" [cols]="45"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button pButton (click)="avancar()">Avançar</button>
+</form>

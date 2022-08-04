@@ -1,0 +1,44 @@
+<form [formGroup]="formGroup">
+  <div class="grid">
+    <div class="col-3">
+      <div class="field-checkbox">
+        <p-checkbox name="eDeficitLocomocao" [binary]="true" value="eDeficitLocomocao"
+          formControlName="eDeficitLocomocao">
+        </p-checkbox>
+        <label>Déficit de locomoção</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="eDoencaColuna" [binary]="true" value="eDoencaColuna" formControlName="eDoencaColuna">
+        </p-checkbox>
+        <label>Doença de coluna</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="eDorArticular" [binary]="true" value="eDorArticular" formControlName="eDorArticular">
+        </p-checkbox>
+        <label>Dor articular</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="eFraquezaMuscular" [binary]="true" value="eFraquezaMuscular"
+          formControlName="eFraquezaMuscular">
+        </p-checkbox>
+        <label>Fraqueza muscular</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="eMusculoDistrofia" [binary]="true" value="eMusculoDistrofia"
+          formControlName="eMusculoDistrofia">
+        </p-checkbox>
+        <label>Músculo distrofia</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="eOutros" [binary]="true" value="eOutros" formControlName="eOutros">
+        </p-checkbox>
+        <label>Outros</label>
+      </div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="col-3">
+      <button pButton (click)="avancar()">Avançar</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,130 @@
+<form [formGroup]="formGroup">
+  <div class="grid">
+    <div class="md:col-6">
+      <label>Nome</label>
+      <input type="text" formControlName="nome" class="form-control" pInputText>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="col-12">
+      <p-table>
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Quantity</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body">
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </ng-template>
+      </p-table>
+      <div class="formulario">
+        <app-form-paciente></app-form-paciente>
+      </div>
+      <div class="formulario">
+        <app-especialdade></app-especialdade>
+      </div>
+    </div>
+  </div>
+</form>
+<p-dialog header="Antecedentes pessoais e familiares" [modal]="true" [(visible)]="modalAntParentesco"
+  [style]="{width: '80vw', height: '80vh'}">
+  <app-antecedentes-familiar (closeDialoAntecendentes)="openDialogSistomatologico()"></app-antecedentes-familiar>
+</p-dialog>
+<p-dialog header="Interrogatório Sintomatologístico" [modal]="true" [(visible)]="modalSistomalogico"
+  [style]="{width: '80vw', height: '80vh'}">
+  <app-sistomatologico (closeDialogSistematologico)="openModalRespiratorio()"></app-sistomatologico>
+</p-dialog>
+<p-dialog header="Respiratório" [modal]="true" [(visible)]="modalRespiratorio"
+  [style]="{width: '80vw', height: '80vh'}">
+  <app-respiratorio (closeDialogRespiratorio)="openModalGastro()"></app-respiratorio>
+</p-dialog>
+<p-dialog header="Gastrointestinal/Hepático" [modal]="true" [(visible)]="modalGastroIntestinal"
+  [style]="{width: '80vw', height: '80vh'}">
+  <app-gastrointestinal (closeGastroIntestinal)="openModalRenal()"></app-gastrointestinal>
+</p-dialog>
+<!--<p-dialog header="Renal" [modal]="true" [(visible)]="modalRenal" [style]="{width: '80vw', height: '80vh'}">
+  <app-renal (eventCloseDialogRenal)="openModalEndocrino()"></app-renal>
+</p-dialog>
+<p-dialog header="Sistema endocríno" [modal]="true" [(visible)]="modalEndocrino"
+  [style]="{width: '80vw', height: '80vh'}">
+  <app-endocrino (eventCloseDialog)="openModalLocomotor()"></app-endocrino>
+</p-dialog>
+<p-dialog header="Sistema locomotor" [modal]="true" [(visible)]="modalLocomotor"
+  [style]="{width: '80vw', height: '80vh'}">
+  <app-locomotor (closeDialogLocomotor)="openDialogImunologico()"></app-locomotor>
+</p-dialog>
+<p-dialog header="Sistema Imunologico" [modal]="true" [(visible)]="modalSistemaHimunologico"
+  [style]="{width: '80vw', height: '80vh'}">
+  <app-sistema-himunologico (closeModalSistemaImunologico)="openDialogNeoplastia()"></app-sistema-himunologico>
+</p-dialog>
+<p-dialog header="Neoplastia" [modal]="true" [(visible)]="modalNeoplatia" [style]="{width: '80vw', height: '80vh'}">
+  <app-neoplasia (eventNeoplasia)="openDialogMedicacao()"></app-neoplasia>
+</p-dialog>
+<p-dialog header="Medicações" [modal]="true" [(visible)]="modalMedicacao" [style]="{width: '80vw', height: '80vh'}">
+  <app-medicacoes (eventMedicamentos)="openDialogMedicamentoCaseiro()"></app-medicacoes>
+</p-dialog>
+<p-dialog header="Medicações caseiras" [modal]="true" [(visible)]="modalMedicacaoCaseira"
+  [style]="{width: '80vw', height: '80vh'}">
+  <app-medicacoes-caseiras (closeDialogMedicacaocaseira)="openModalCirurgia()"></app-medicacoes-caseiras>
+</p-dialog>
+<p-dialog header="Cirurgia/Anestésia Prévia" [modal]="true" [(visible)]="modalCirurgia"
+  [style]="{width: '80vw', height: '80vh'}">
+  <app-cirurgia (closeDialogCirurgia)="openModalExameFisico()"></app-cirurgia>
+</p-dialog>
+<p-dialog header="Exame físico" [modal]="true" [(visible)]="modalExameFisico" [style]="{width: '80vw', height: '80vh'}">
+  <app-exame-fisico (closeDialogExameFisico)="openDialogViasAereas()"></app-exame-fisico>
+</p-dialog>
+<p-dialog header="Vias areas" [modal]="true" [(visible)]="modalViasAreas" [style]="{width: '80vw', height: '80vh'}">
+  <app-vias-aereas (closeDialogViasAereas)="openDialogMallapti()"></app-vias-aereas>
+</p-dialog>
+<p-dialog header="Mallampati" [modal]="true" [(visible)]="modalModalMallepati"
+  [style]="{width: '80vw', height: '80vh'}">
+  <app-mallampati (closeDialogMallampati)="openDistanciaTireo()"></app-mallampati>
+</p-dialog>
+<p-dialog header="Distância / Tireo / Esterno / Mento" [modal]="true" [(visible)]="modalDistanciaTireo"
+  [style]="{width: '80vw', height: '80vh'}">
+  <app-distancia-tireo (closeDialogDistanciaTireo)="openDialogDenticao()"></app-distancia-tireo>
+</p-dialog>
+<p-dialog header="Dentição / Prognastimo" [modal]="true" [(visible)]="modalDenticao"
+  [style]="{width: '80vw', height: '80vh'}">
+  <app-denticao-prognastimo (closeDialogDenticaoPrognastimo)="openDialogMobilidadevertical()">
+  </app-denticao-prognastimo>
+</p-dialog>
+<p-dialog header="Mobilidade vertical" [modal]="true" [(visible)]="modalMobilidadeVertical"
+  [style]="{width: '80vw', height: '80vh'}">
+  <app-mobilidade-vertical (closeDialogMobilidadeVertical)="openDialogAsa()"></app-mobilidade-vertical>
+</p-dialog>
+<p-dialog header="Avaliação ASA" [modal]="true" [(visible)]="modalAsa" [style]="{width: '80vw', height: '80vh'}">
+  <app-asa (closeDialogAsa)="openDialogEmergencia()"></app-asa>
+</p-dialog>
+<p-dialog header="Emergência" [modal]="true" [(visible)]="modelEmergencia" [style]="{width: '80vw', height: '80vh'}">
+  <app-emergencia (closeDialogEmergencia)="openDialogPlanejamento()"></app-emergencia>
+</p-dialog>
+<p-dialog header="Planejamento anestésico" [modal]="true" [(visible)]="modalPlanejamento"
+  [style]="{width: '80vw', height: '80vh'}">
+  <app-planejamento (closeDialogPlanejamento)="openDialogHemo()"></app-planejamento>
+</p-dialog>
+<p-dialog header="Hemocompanentes" [modal]="true" [(visible)]="modalHemo" [style]="{width: '80vw', height: '80vh'}">
+  <app-hemo (closeDialogHemo)="openDialogUTI()"></app-hemo>
+</p-dialog>
+<p-dialog header="UTI" [modal]="true" [(visible)]="modalUTI" [style]="{width: '80vw', height: '80vh'}">
+  <app-uti (closeDialogUTI)="openDialogLiberacao()"></app-uti>
+</p-dialog>
+<p-dialog header="Liberação para Cirurgia" [modal]="true" [(visible)]="modalLiberacao" [style]="{width: '80vw', height: '80vh'}">
+  <app-liberacao-cirurgia (closeDialogLiberacao)="openDialogAnestesia()"></app-liberacao-cirurgia>
+</p-dialog>
+<p-dialog header="Anestesia propostas" [modal]="true" [(visible)]="modalAnestesia" [style]="{width: '80vw', height: '80vh'}">
+  <app-anestesia (closeDialogAnestesia)="openDialogAnesteologista()"></app-anestesia>
+</p-dialog>
+<p-dialog header="Data / Anestesiologista" [modal]="true" [(visible)]="modalAnesteologista" [style]="{width: '80vw', height: '80vh'}">
+ <app-anesteologista></app-anesteologista>
+</p-dialog>-->
+<button (click)="openModal()">Clique aqui</button>

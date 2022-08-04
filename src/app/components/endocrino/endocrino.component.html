@@ -1,0 +1,31 @@
+<form [formGroup]="formGroup">
+  <div class="grid">
+    <div class="col-3">
+      <div class="field-checkbox">
+        <p-checkbox name="hasDiabeteTipoIII" [binary]="true" value="hasDiabeteTipoIII" formControlName="hasDiabeteTipoIII">
+        </p-checkbox>
+        <label>Diabetes tipo I/II</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasDoencaTireoide" [binary]="true" value="hasDoencaTireoide" formControlName="hasDoencaTireoide">
+        </p-checkbox>
+        <label>Doenças de tireoíde</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasReposicaoHormonal" [binary]="true" value="hasReposicaoHormonal" formControlName="hasReposicaoHormonal">
+        </p-checkbox>
+        <label>Reposição hormonal</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasOutrosEndocrino" [binary]="true" value="hasOutrosEndocrino" formControlName="hasOutrosEndocrino">
+        </p-checkbox>
+        <label>Outros</label>
+      </div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="col-3">
+      <button pButton (click)="avancar()">Avançar</button>
+    </div>
+  </div>
+</form>

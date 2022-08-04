@@ -1,0 +1,22 @@
+<form [formGroup]="formGroup">
+  <div class="grid">
+    <div class="col-4">
+      <p-toggleButton (onChange)="isAlergico()" formControlName="eAlergico" onLabel="Sim" offLabel="É alergico ?"
+        onIcon="pi-check" offIcon="pi pi-times">
+      </p-toggleButton>
+    </div>
+    <div class="col-4">
+      <label>Agente</label>
+      <textarea pInputTextarea formControlName="agente" [rows]="8" [cols]="45"></textarea>
+    </div>
+    <div class="col-4">
+      <label>Tipo de reação</label>
+      <textarea [rows]="8" [cols]="45" formControlName="tipoReacao" pInputTextarea></textarea>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="col-3">
+      <button pButton (click)="avancar()">Avançar</button>
+    </div>
+  </div>
+</form>

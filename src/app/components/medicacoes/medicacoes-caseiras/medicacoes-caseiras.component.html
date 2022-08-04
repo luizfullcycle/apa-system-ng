@@ -1,0 +1,32 @@
+<form>
+  <div class="grid">
+    <div class="col-2">
+      <div class="field-checkbox">
+        <p-radioButton name="fumante" label="Sim" value="1">
+        </p-radioButton>
+      </div>
+      <div class="field-checkbox">
+        <p-radioButton name="fumante" label="Não" value="0">
+        </p-radioButton>
+      </div>
+    </div>
+    <div class="formgroup-inline">
+      <div class="field">
+        <textarea placeholder="Por quê está tomando?" pInputTextarea [rows]="8" [cols]="35"></textarea>
+      </div>
+      <div class="field">
+        <textarea placeholder="Com que frequência toma e quando toma" pInputTextarea [rows]="8" [cols]="35"></textarea>
+      </div>
+      <div class="field">
+        <textarea placeholder="Quando comecou a fazer uso?" pInputTextarea [rows]="8" [cols]="35"></textarea>
+      </div>
+      <div class="field">
+        <textarea placeholder="Teve reações adversas" pInputTextarea [rows]="8" [cols]="35"></textarea>
+      </div>
+      <div class="field">
+        <textarea placeholder="Quando comecou a fazer uso?" pInputTextarea [rows]="8" [cols]="35"></textarea>
+      </div>
+    </div>
+  </div>
+  <button pButton (click)="avancar()"></button>
+</form>

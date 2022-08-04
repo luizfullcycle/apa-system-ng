@@ -1,0 +1,69 @@
+<form [formGroup]="formGroup">
+  <div class="grid">
+    <div class="col-4">
+      <div class="field-checkbox">
+        <p-checkbox name="hasAngioplastia" [binary]="true" value="hasAngioplastia" formControlName="hasAngioplastia">
+        </p-checkbox>
+        <label>Angioplastia</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasAngina" [binary]="true" value="hasAngina" formControlName="hasAngina"></p-checkbox>
+        <label>Angina</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasArritima" [binary]="true" value="hasArritima" formControlName="hasArritima"></p-checkbox>
+        <label>Arritimia</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasAAA" [binary]="true" value="hasAAA" formControlName="hasAAA"></p-checkbox>
+        <label>AAA</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasEdemaDeMMi" [binary]="true" value="hasEdemaDeMMi" formControlName="hasEdemaDeMMi"></p-checkbox>
+        <label>Edema de MMi</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasMarcaPasso" [binary]="true" value="hasMarcaPasso" formControlName="hasMarcaPasso"></p-checkbox>
+        <label>Marca passo</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasCarionaripatia" [binary]="true" value="hasCarionaripatia" formControlName="hasCarionaripatia">
+        </p-checkbox>
+        <label>Corionaripatia</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasHipertensao" [binary]="true" value="hasHipertensao" formControlName="hasHipertensao">
+        </p-checkbox>
+        <label>Hipertensão</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasPalpitacao" [binary]="true" value="hasPalpitacao" formControlName="hasPalpitacao">
+        </p-checkbox>
+        <label>Palpitação</label>
+      </div>
+    </div>
+    <div class="col-5">
+      <div class="field-checkbox">
+        <p-checkbox name="hasInfartoMiocardio" [binary]="true" value="hasInfartoMiocardio"
+          formControlName="hasInfartoMiocardio">
+        </p-checkbox>
+        <label>Infarto do miocardio</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasInsuficienciaCardiaca" [binary]="true" value="hasInsuficienciaCardiaca"
+          formControlName="hasInsuficienciaCardiaca"></p-checkbox>
+        <label>Insuficiência Cardiaca</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasValvulopatia" [binary]="true" value="hasValvulopatia" formControlName="hasValvulopatia">
+        </p-checkbox>
+        <label>Valvulopatia</label>
+      </div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="col-3">
+      <button pButton (click)="avancar()">Avançar</button>
+    </div>
+  </div>
+</form>

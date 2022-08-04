@@ -1,0 +1,14 @@
+<p-fieldset legend="Especialidade da cirurgia">
+  <form [formGroup]="formGroup">
+    <div class="grid">
+      <div class="md:col-6">
+         <label>Especialidade</label>
+         <p-dropdown formControlName="especialidades"  [options]="especialidades" optionLabel="descricao" optionValue="id" class="form-control-left"></p-dropdown>
+        </div>
+      <div class="md:col-6">
+        <label>Cirurgia proposta</label>
+        <textarea [rows]="6" [cols]="60" formControlName="cirurgiaProposta" pInputTextarea></textarea>
+      </div>
+    </div>
+  </form>
+</p-fieldset>

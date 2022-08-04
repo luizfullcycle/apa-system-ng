@@ -1,0 +1,66 @@
+<form [formGroup]="formGroup">
+  <div class="grid">
+    <div class="col-3">
+      <div class="field-checkbox">
+        <p-checkbox name="hasEpigastrica" [binary]="true" value="hasEpigastrica" formControlName="hasEpigastrica">
+        </p-checkbox>
+        <label>Dor epigástrica</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasGastrite" [binary]="true" value="hasGastrite" formControlName="hasGastrite">
+        </p-checkbox>
+        <label>Gastrite</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasRefluxoGastro" [binary]="true" value="hasRefluxoGastro" formControlName="hasRefluxoGastro">
+        </p-checkbox>
+        <label>Refluxo gastroesofágico</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasUlceraPeptica" [binary]="true" value="hasUlceraPeptica" formControlName="hasUlceraPeptica">
+        </p-checkbox>
+        <label>Úlcera péptica</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasHerniaHiato" [binary]="true" value="hasHerniaHiato" formControlName="hasHerniaHiato">
+        </p-checkbox>
+        <label>Hérnia de hiato</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasObstrucaoIntestinal" [binary]="true" value="hasObstrucaoIntestinal" formControlName="hasObstrucaoIntestinal">
+        </p-checkbox>
+        <label>Obstrução intestinal</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasIctericia" [binary]="true" value="hasIctericia" formControlName="hasIctericia">
+        </p-checkbox>
+        <label>Ictericia</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasCirosse" [binary]="true" value="hasCirosse" formControlName="hasCirosse">
+        </p-checkbox>
+        <label>Cirrose</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasVomitoDiarreia" [binary]="true" value="hasVomitoDiarreia" formControlName="hasVomitoDiarreia">
+        </p-checkbox>
+        <label>Vômito/diarréia</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasEsteatoseHepatica" [binary]="true" value="hasEsteatoseHepatica" formControlName="hasEsteatoseHepatica">
+        </p-checkbox>
+        <label>Estéatose hepática</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasOutrosGastro" [binary]="true" value="hasOutrosGastro" formControlName="hasOutrosGastro">
+        </p-checkbox>
+        <label>Outros</label>
+      </div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="col-3">
+       <button pButton (click)="avancar()">Avançar</button>
+    </div>
+  </div>
+</form>

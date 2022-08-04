@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+label{
+  display: flex;
+  font-family: 'Anek Latin', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
+}
+.form-control{
+  width: 45vw;
+  height: 5vh;
+}
+.form-control-left{
+  width: 45vw;
+  height: 5vh;
+}
+.form-control-right{
+  width: 42vw;
+  height: 5vh;
+}
+
+
+

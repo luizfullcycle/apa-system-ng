@@ -1,0 +1,56 @@
+<form [formGroup]="formGroup">
+  <div class="grid">
+    <div class="col-3">
+      <div class="field-checkbox">
+        <p-checkbox name="hasDoencaRenal" [binary]="true" value="hasDoencaRenal" formControlName="hasDoencaRenal">
+        </p-checkbox>
+        <label>Doença renal crônica</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasInsuficiencaRenal" [binary]="true" value="hasInsuficiencaRenal" formControlName="hasInsuficiencaRenal"></p-checkbox>
+        <label>Insuficiência renal</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasDialise" [binary]="true" value="hasDialise" formControlName="hasDialise"></p-checkbox>
+        <label>Diálise</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasNefrolitiase" [binary]="true" value="hasNefrolitiase" formControlName="hasNefrolitiase"></p-checkbox>
+        <label>Nefrolitiase</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasDorLombar" [binary]="true" value="hasDorLombar" formControlName="hasDorLombar"></p-checkbox>
+        <label>Dor lombar</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasHiperplasiaProspatica" [binary]="true" value="hasHiperplasiaProspatica" formControlName="hasHiperplasiaProspatica"></p-checkbox>
+        <label>Hiperplasia próspatica</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasDisuria" [binary]="true" value="hasDisuria" formControlName="hasDisuria">
+        </p-checkbox>
+        <label>Disúria</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasPoliuria" [binary]="true" value="hasPoliuria" formControlName="hasPoliuria">
+        </p-checkbox>
+        <label>Poliúria</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasCistite" [binary]="true" value="hasCistite" formControlName="hasCistite">
+        </p-checkbox>
+        <label>Cistite</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasOutrosRenal" [binary]="true" value="hasOutrosRenal" formControlName="hasOutrosRenal">
+        </p-checkbox>
+        <label>Outros</label>
+      </div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="col-3">
+      <button pButton (click)="avancar()">Avançar</button>
+    </div>
+  </div>
+</form>

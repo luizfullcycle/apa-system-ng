@@ -1,0 +1,21 @@
+<form [formGroup]="formGroup">
+  <div class="grid">
+    <div class="col-2">
+      <label>Usa drogas ilicítas ?</label>
+      <div class="field-checkbox">
+        <p-radioButton name="usaDrogaIlicita" formControlName="usaDrogaIlicita" label="Sim" value="1"></p-radioButton>
+      </div>
+      <div class="field-checkbox">
+        <p-radioButton name="usaDrogaIlicita" formControlName="usaDrogaIlicita" label="Não" value="0"></p-radioButton>
+      </div>
+    </div>
+    <div class="col-2" *ngIf="usaDroga">
+      <div class="formgroup-inline">
+        <div class="field">
+          <label>Informar o tempo</label>
+          <textarea pInputTextarea formControlName="tempoDrogaIlicita" [rows]="8" [cols]="45"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

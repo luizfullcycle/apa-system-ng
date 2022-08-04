@@ -1,0 +1,66 @@
+<form [formGroup]="formGroup">
+  <div class="grid">
+    <div class="col-4">
+      <div class="field-checkbox">
+        <p-checkbox name="hasIvasRecente" [binary]="true" value="hasIvasRecente" formControlName="hasIvasRecente">
+        </p-checkbox>
+        <label>Ivas recente</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasDependecia02" [binary]="true" value="hasDependecia02" formControlName="hasDependecia02">
+        </p-checkbox>
+        <label>Dependência de 0²</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasCovid" [binary]="true" value="hasCovid" formControlName="hasCovid">
+        </p-checkbox>
+        <label>Covid - 19 (variantes)</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasTosse" [binary]="true" value="hasTosse" formControlName="hasTosse">
+        </p-checkbox>
+        <label>Tosse</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasApneiaSono" [binary]="true" value="hasApneiaSono" formControlName="hasApneiaSono">
+        </p-checkbox>
+        <label>Apnéia obstrutiva do sono</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasEnfisemia" [binary]="true" value="hasEnfisemia" formControlName="hasEnfisemia">
+        </p-checkbox>
+        <label>Enfisemia</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasAsma" [binary]="true" value="hasAsma" formControlName="hasAsma">
+        </p-checkbox>
+        <label>Asma</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasDispeneia" [binary]="true" value="hasDispeneia" formControlName="hasDispeneia">
+        </p-checkbox>
+        <label>Dispinéia</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasCianose" [binary]="true" value="hasCianose" formControlName="hasCianose">
+        </p-checkbox>
+        <label>Cianose</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasTuberculose" [binary]="true" value="hasTuberculose" formControlName="hasTuberculose">
+        </p-checkbox>
+        <label>Tuberculose</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="hasOutrasRespiratorio" [binary]="true" value="hasOutrasRespiratorio" formControlName="hasOutrasRespiratorio">
+        </p-checkbox>
+        <label>Outras</label>
+      </div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="col-3">
+      <button pButton (click)="avancar()">Avançar</button>
+    </div>
+  </div>
+</form>

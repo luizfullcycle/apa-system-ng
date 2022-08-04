@@ -1,0 +1,35 @@
+<form [formGroup]="formGroup">
+  <div class="grid">
+    <div class="col-3">
+      <div class="field-checkbox">
+        <p-checkbox name="eHormonioterapia" [binary]="true" value="eHormonioterapia"
+          formControlName="eHormonioterapia">
+        </p-checkbox>
+        <label>Hormonioterapia</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="eQuimioterapia" [binary]="true" value="eQuimioterapia"
+          formControlName="eQuimioterapia">
+        </p-checkbox>
+        <label>Quimioterapia</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="eRadioterapia" [binary]="true" value="eRadioterapia"
+          formControlName="eRadioterapia">
+        </p-checkbox>
+        <label>Radioterapia</label>
+      </div>
+      <div class="field-checkbox">
+        <p-checkbox name="eOutros" [binary]="true" value="eOutros"
+          formControlName="eOutros">
+        </p-checkbox>
+        <label>Outros</label>
+      </div>
+      <div class="grid">
+        <div class="col-3">
+          <button pButton (click)="avancar()"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

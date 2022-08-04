@@ -1,0 +1,20 @@
+<form>
+  <div class="field-checkbox">
+    <p-checkbox name="eDoencaRenal" [binary]="true" value="eDoencaRenal">
+    </p-checkbox>
+    <label>Concentrado de hémacias</label>
+  </div>
+  <div class="field-checkbox">
+    <p-checkbox name="eInsuficiencaRenal" [binary]="true" value="eInsuficiencaRenal"></p-checkbox>
+    <label>Concentrado de plaquetas</label>
+  </div>
+  <div class="field-checkbox">
+    <p-checkbox name="eDialise" [binary]="true" value="eDialise"></p-checkbox>
+    <label>Plasma Fresco</label>
+  </div>
+  <div class="field-checkbox">
+    <p-checkbox name="eNefrolitiase" [binary]="true" value="eNefrolitiase"></p-checkbox>
+    <label>Criopreciptado</label>
+  </div>
+  <button pButton (click)="avancar()"></button>
+</form>

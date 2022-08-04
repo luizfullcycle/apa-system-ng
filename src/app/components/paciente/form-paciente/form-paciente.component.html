@@ -1,0 +1,26 @@
+<p-fieldset legend="Dados do paciente">
+  <form [formGroup]="formGroup">
+    <div class="grid">
+      <div class="md:col-6">
+        <label>Nome</label>
+        <input class="form-control-left" formControlName="nomePaciente" type="text" pInputText>
+      </div>
+      <div class="md:col-6">
+        <label>Idade</label>
+        <input type="text" formControlName="idadePaciente" class="form-control-right" pInputText>
+      </div>
+      <div class="md:col-6">
+        <label>Sexo</label>
+        <p-dropdown [options]="sexos" formControlName="sexoPaciente" optionLabel="descricao" optionValue="id" class="form-control-left"></p-dropdown>
+      </div>
+      <div class="md:col-6">
+        <label>Altura</label>
+        <input class="form-control-right" formControlName="alturaPaciente" type="text" pInputText>
+      </div>
+      <div class="md:col-6">
+        <label>Kg</label>
+        <input class="form-control-left" formControlName="kiloPaciente" type="text" pInputText>
+      </div>
+    </div>
+  </form>
+</p-fieldset>

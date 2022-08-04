@@ -1,0 +1,23 @@
+<form [formGroup]="formGroup">
+  <label>O paciente é tabagista ?</label>
+  <div class="field-checkbox">
+    <p-radioButton  name="eFumante" formControlName="eFumante" label="Sim" value="1">
+    </p-radioButton>
+  </div>
+  <div class="field-checkbox">
+    <p-radioButton  name="eFumante" formControlName="eFumante" label="Não" value="0">
+    </p-radioButton>
+  </div>
+  <div *ngIf="isFumante">
+    <div class="formgroup-inline">
+      <div class="field">
+        <label>Informar o tempo</label>
+        <textarea formControlName="tempoFumo" pInputTextarea [rows]="8" [cols]="45"></textarea>
+      </div>
+      <div class="field">
+        <label>Informar cigarros por dia</label>
+        <textarea formControlName="quantidadeCigarros" [rows]="8" [cols]="45" pInputTextarea></textarea>
+      </div>
+    </div>
+  </div>
+</form>
